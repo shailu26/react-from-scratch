@@ -1,0 +1,27 @@
+{
+  "name": "react-from-scratch",
+  "version": "1.0.0",
+  "description": "Creating React Project from Scratch",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shailu26/react-from-scratch.git"
+  },
+  "keywords": [],
+  "author": "Shailesh Gehlot",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shailu26/react-from-scratch/issues"
+  },
+  "homepage": "https://github.com/shailu26/react-from-scratch#readme",
+  "devDependencies": {
+    "parcel": "^2.11.0",
+    "process": "^0.11.10"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
+}
