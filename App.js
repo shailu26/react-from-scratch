@@ -9,16 +9,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 
-// JSX -> HTML like Syntax
+const Title = () => <h1>I am Title</h1>;
 
-// JSX (Transpiled before it reaches the JS) = Parcel - Babel
+/**
+ *
+ * Component composition is when we use component inside component
+ */
+const Main = () => {
+  return (
+    <div>
+      <Title />
+      <div>Main Component</div>
+    </div>
+  );
+};
 
-// JSX => Babel transpiles it to React.createElement => ReactElement - JS Object => HTMLELEMENT(render)
-const jsxHeading = (
-  <h1 id="jsx-heading" className="jsx-heading">
-    Hello From JSX
-  </h1>
-);
-console.log(jsxHeading);
 const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(jsxHeading);
+root.render(<Main />);
