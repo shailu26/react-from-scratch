@@ -7,14 +7,18 @@
  * ReactElement(Object) ==> HTML (Browser Understands)
  */
 import React from 'react';
-import ReactDOM from 'react-dom';
-const parent = React.createElement(
-  'div',
-  { id: 'parent' },
-  React.createElement('div', { id: 'child' }, React.createElement('h1', {}, 'hello'))
-);
-console.log(parent);
-// const heading = React.createElement('div', { id: 'child' }, 'Hello world from React!');
+import ReactDOM from 'react-dom/client';
 
+// JSX -> HTML like Syntax
+
+// JSX (Transpiled before it reaches the JS) = Parcel - Babel
+
+// JSX => Babel transpiles it to React.createElement => ReactElement - JS Object => HTMLELEMENT(render)
+const jsxHeading = (
+  <h1 id="jsx-heading" className="jsx-heading">
+    Hello From JSX
+  </h1>
+);
+console.log(jsxHeading);
 const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(parent);
+root.render(jsxHeading);

@@ -3,6 +3,8 @@
   "version": "1.0.0",
   "description": "Creating React Project from Scratch",
   "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html",
     "test": "jest"
   },
   "repository": {
