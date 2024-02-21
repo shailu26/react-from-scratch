@@ -1,0 +1,32 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+.header {
+  background-color: #edede9;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px;
+}
+.logo {
+  font-size: 22px;
+  background: #ccd5ae;
+  width: 22px;
+  display: flex;
+  justify-content: center;
+  border-radius: 2px;
+  font-family: sans-serif;
+}
+.search {
+  width: 50%;
+}
+.search input {
+  width: 100%;
+  height: 32px;
+  border-radius: 4px;
+  border: 0;
+  outline: none;
+  text-indent: 8px;
+  color: rgba(0, 0, 0, 0.87);
+}
