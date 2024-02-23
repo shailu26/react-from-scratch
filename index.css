@@ -1,16 +1,18 @@
 body {
   margin: 0;
   padding: 0;
+  font-family: 'Open Sans', sans-serif;
 }
 .header {
-  background-color: #edede9;
+  /* background-color: #edede9; */
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 8px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
 }
 .body {
-  padding: 24px;
+  padding: 24px 96px;
 }
 .logo {
   justify-content: center;
@@ -40,30 +42,74 @@ body {
 }
 
 .res-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-start;
+  padding: 12px 0;
+  display: grid;
+  grid-template-columns: repeat(4, 0.5fr);
 
-  padding: 12px 0px;
+  margin: 32px 16px;
+  align-items: start;
 }
 .res-card {
-  width: 200px;
-  min-height: 200px;
-  border: 1px solid transparent;
-  margin: 4px;
-  background-color: #e4e4e436;
+  width: 238px;
+  margin-bottom: 12px;
 }
 .res-card:hover {
   cursor: pointer;
-  border: 1px solid #74747436;
+  transform: scale(0.95);
+  transition: transform 100ms ease-in-out;
 }
 .res-card .block {
   padding: 0 8px;
+  margin: 8px;
 }
 .res-card .block div {
   padding: 4px 0;
 }
+.res-card-logo {
+  width: 238px;
+  height: 158px;
+}
 .res-card-logo > img {
   width: 100%;
-  max-height: 133px;
+  height: 100%;
+  border-radius: 16px;
+  object-fit: cover;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.name {
+  font-size: 16px;
+  font-weight: 700;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-wrap: nowrap;
+}
+.cuisines {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+  text-wrap: nowrap;
+  color: gray;
+  font-size: 14px;
+}
+.cost-time {
+  display: flex;
+  gap: 2px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+span.rating {
+  display: flex;
+  gap: 4px;
+}
+span.rating span {
+  color: white;
+  background-color: #008e3a;
+  width: 30px;
+  text-align: center;
+  margin-right: 2px;
+  border-radius: 5px;
+  font-size: 14px;
+  line-height: 22px;
 }

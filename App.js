@@ -37,8 +37,9 @@ const Header = () => {
 
 const RestaurentCard = (props) => {
   const { resData } = props;
-  const { name, cuisines, costForTwo } = resData.info;
+  const { name, cuisines, costForTwo, avgRating } = resData.info;
   const { slaString } = resData.info.sla;
+  console.log(resData.info);
   return (
     <div className="res-card">
       <div className="res-card-logo">
@@ -48,9 +49,19 @@ const RestaurentCard = (props) => {
       </div>
       <div className="block">
         <div className="name">{name}</div>
-        <div className="menu-list">{cuisines.join(', ')}</div>
-        <div className="ratings">{costForTwo}</div>
-        <div className="time">{slaString}</div>
+        <div className="cost-time">
+          {avgRating && (
+            <>
+              <span className="rating">
+                <span>{avgRating}</span>
+              </span>
+              <span>•</span>
+            </>
+          )}
+          <span className="time">{slaString}</span>
+        </div>
+
+        <div className="cuisines">{cuisines.join(', ')}</div>
       </div>
     </div>
   );
